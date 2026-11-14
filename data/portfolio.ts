@@ -37,20 +37,7 @@ export const profile = {
 };
 
 export const projects: Project[] = [
-  {
-    title: "Leave Conflict Detection & Approval Engine",
-    summary:
-      "Final year project: a web system for a 14-staff, 24-hour clinic in Kemaman that detects leave conflicts and ranks requests by severity, so managers can approve without leaving shifts understaffed.",
-    highlights: [
-      "Genetic Algorithm with a severity-weighted fitness function scores conflicts across leave type, request date, staff role and shift coverage minimums",
-      "Priority queue orders requests Emergency → Medical → Maternity → Annual, FIFO on ties",
-      "Finite State Machine enforces the request lifecycle: Pending, Approved, Rejected, Cancelled",
-      "Role-based dashboards for staff, approvers and admins; parameterised queries, XSS sanitisation and bcrypt hashing",
-    ],
-    stack: ["PHP", "SQLite / MySQL", "Bootstrap 5", "Genetic Algorithm", "FSM"],
-    status: "In progress",
-    links: [{ label: "Code", href: "https://github.com/acidzburns" }], // TODO: repo link
-  },
+  
   {
     title: "Boundary-Aware CNN for Honeycomb Panel Defects",
     summary:
