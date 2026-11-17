@@ -1,8 +1,7 @@
 // ─────────────────────────────────────────────────────────────
 // All the text on your portfolio lives in this one file.
 // Edit here — you don't need to touch the page code.
-// Anything marked 
-// is a placeholder for you to fill in.
+// Anything marked TODO is a placeholder for you to fill in.
 // ─────────────────────────────────────────────────────────────
 
 export type Project = {
@@ -27,17 +26,30 @@ export const profile = {
   role: "Computer Science (Software Engineering) student",
   location: "Malaysia",
   tagline:
-    "Final-year CS student at UiTM who builds web systems and applies algorithms to real problems — from leave scheduling for a 24-hour clinic to defect detection with deep learning.",
+    "Final-year CS student at UiTM who builds web systems and connects them together — from system integrations with ServiceNow to defect detection with deep learning.",
   availability:
     "Looking for an internship from 2026/2027 — 3 to 6 months.", // TODO: adjust dates
-  email: "aqbdullahakmalhakim@gmail.com", // TODO: your email
+  email: "abdullahakmalhakim@gmail.com",
   github: "https://github.com/acidzburns",
-  linkedin: "https://www.linkedin.com/in/akmal-hakim-655063251/", // TODO
-  
+  linkedin: "https://www.linkedin.com/in/akmal-hakim-655063251/",
 };
 
 export const projects: Project[] = [
-  
+  {
+    title: "Integration Hub",
+    summary:
+      "A system integration and monitoring platform that moves orders from a Shop system to a Warehouse system, with data mapping, automatic retries and ServiceNow incident management.",
+    highlights: [
+      "Polls the source API, maps orders into the warehouse format and delivers them over REST",
+      "Retries temporary failures with exponential backoff; permanent errors open an incident",
+      "Failed messages raise incidents in ServiceNow via the Table API and are resolved automatically after a successful reprocess",
+      "Monitoring dashboard with success rate, latency, delivery log and one-click reprocess",
+      "23 automated tests with Vitest; CI pipeline on GitHub Actions",
+    ],
+    stack: ["Next.js", "TypeScript", "REST APIs", "ServiceNow", "SQLite", "Vitest", "GitHub Actions"],
+    status: "In progress",
+    links: [{ label: "Code", href: "https://github.com/acidzburns/integration-hub" }],
+  },
   {
     title: "Boundary-Aware CNN for Honeycomb Panel Defects",
     summary:
@@ -63,7 +75,10 @@ export const projects: Project[] = [
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     status: "Completed",
-    links: [{ label: "Code", href: "https://github.com/acidzburns" }], // TODO: repo link
+    links: [
+      { label: "Code", href: "https://github.com/acidzburns/portfolio" },
+      { label: "Live", href: "https://akmalhakim.vercel.app" },
+    ],
   },
   // Add your new projects here — copy one block above and edit it.
 ];
@@ -96,9 +111,9 @@ export const education = [
 
 export const skills: { group: string; items: string[] }[] = [
   { group: "Languages", items: ["PHP", "JavaScript", "TypeScript", "Python", "SQL"] },
-  { group: "Web", items: ["Laravel (MVC)", "Next.js", "React", "Tailwind CSS", "Bootstrap"] },
+  { group: "Web & APIs", items: ["Laravel (MVC)", "Next.js", "React", "REST APIs", "Tailwind CSS"] },
   { group: "Data & AI", items: ["MySQL", "SQLite", "CNNs", "Genetic Algorithms"] },
-  { group: "Tools", items: ["Git & GitHub", "VS Code", "XAMPP", "Vercel"] },
+  { group: "Tools", items: ["Git & GitHub", "GitHub Actions", "ServiceNow", "VS Code", "Vercel"] },
 ];
 
 export const languages = ["English", "Bahasa Melayu"];
