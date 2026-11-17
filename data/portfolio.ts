@@ -24,6 +24,8 @@ export const profile = {
   name: "Akmal Hakim Bin Abdullah",
   shortName: "Akmal Hakim",
   role: "Computer Science (Software Engineering) student",
+  // Big serif headline at the top of the page
+  headline: "I build systems that talk to each other.",
   location: "Malaysia",
   tagline:
     "Final-year CS student at UiTM who builds web systems and connects them together — from system integrations with ServiceNow to defect detection with deep learning.",
@@ -70,7 +72,7 @@ export const projects: Project[] = [
       "The site you're looking at — a fast, responsive single-page portfolio with all content driven from one typed data file.",
     highlights: [
       "Built with the Next.js App Router and React Server Components",
-      "Styled with Tailwind CSS; automatic light and dark mode",
+      "Clean, responsive design styled with Tailwind CSS",
       "Deployed on Vercel from GitHub",
     ],
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
@@ -117,3 +119,12 @@ export const skills: { group: string; items: string[] }[] = [
 ];
 
 export const languages = ["English", "Bahasa Melayu"];
+
+// Small facts shown in the green "chips" strip under the hero
+export const stats: { label: string; value: string }[] = [
+  { label: "Automated tests", value: "23" },
+  { label: "CI pipeline", value: "passing" },
+  { label: "ServiceNow", value: "connected" },
+  { label: "Internship", value: "3–6 months" },
+  { label: "Languages", value: "EN · BM" },
+];

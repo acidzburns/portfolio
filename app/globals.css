@@ -1,25 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f5f3ee;
-  --ink: #1c1b18;
-  --muted: #6b675e;
-  --line: #dcd7cc;
-  --card: #fbfaf7;
-  --accent: #0e6b5c;
-  --accent-soft: #dcebe6;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #12130f;
-    --ink: #ecebe6;
-    --muted: #9c998f;
-    --line: #2b2c26;
-    --card: #181914;
-    --accent: #5cc5ae;
-    --accent-soft: #1d2f2a;
-  }
+  --paper: #ffffff;
+  --ink: #0d0d0d;
+  --muted: #6b6b6b;
+  --line: #ececea;
+  --card: #f7f5f2;
+  --card-line: #e9e5df;
+  --accent: #0c8c5e;
+  --accent-soft: #e6f4ee;
 }
 
 @theme inline {
@@ -28,9 +17,11 @@
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-card: var(--card);
+  --color-card-line: var(--card-line);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-newsreader);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -44,6 +35,30 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
-  color: var(--paper);
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+/* Slowly scrolling strip of facts */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
 }
