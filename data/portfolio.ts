@@ -37,6 +37,22 @@ export const profile = {
 };
 
 export const projects: Project[] = [
+    {
+    title: "AssetFlow",
+    summary:
+      "An IT asset and equipment loan system: staff request laptops and other equipment, admins approve, hand out and receive it back, and a dashboard tracks overdue loans and repairs.",
+    highlights: [
+      "C# / ASP.NET Core 10 REST API with JWT login and Staff / Admin roles",
+      "Object-oriented domain model: each loan moves Requested → Approved → Checked out → Returned, and invalid steps are refused",
+      "PostgreSQL with Entity Framework Core migrations, plus hand-written SQL for the admin report",
+      "React + TypeScript frontend with role-based actions and an admin dashboard",
+      "45 automated tests (xUnit + Vitest); GitHub Actions CI builds and tests the API and frontend",
+    ],
+    stack: ["C#", ".NET 10", "PostgreSQL", "React", "TypeScript", "xUnit", "GitHub Actions"],
+    status: "In progress",
+    links: [{ label: "Code", href: "https://github.com/acidzburns/assetflow" }],
+  },
+
   {
     title: "Integration Hub",
     summary:
@@ -112,9 +128,9 @@ export const education = [
 ];
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Languages", items: ["PHP", "JavaScript", "TypeScript", "Python", "SQL"] },
-  { group: "Web & APIs", items: ["Laravel (MVC)", "Next.js", "React", "REST APIs", "Tailwind CSS"] },
-  { group: "Data & AI", items: ["MySQL", "SQLite", "CNNs", "Genetic Algorithms"] },
+  { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "PHP", "Python", "SQL"] },
+  { group: "Web & APIs", items: [".NET / ASP.NET Core", "React", "Next.js", "Laravel (MVC)", "REST APIs"] },
+  { group: "Data", items: ["PostgreSQL", "MySQL", "SQLite", "Entity Framework Core"] },
   { group: "Tools", items: ["Git & GitHub", "GitHub Actions", "ServiceNow", "VS Code", "Vercel"] },
 ];
 
@@ -122,7 +138,7 @@ export const languages = ["English", "Bahasa Melayu"];
 
 // Small facts shown in the green "chips" strip under the hero
 export const stats: { label: string; value: string }[] = [
-  { label: "Automated tests", value: "23" },
+  { label: "Automated tests", value: "68" },
   { label: "CI pipeline", value: "passing" },
   { label: "ServiceNow", value: "connected" },
   { label: "Internship", value: "3–6 months" },
