@@ -30,7 +30,7 @@ export const profile = {
   tagline:
     "Final-year CS student at UiTM who builds web systems and connects them together — from system integrations with ServiceNow to defect detection with deep learning.",
   availability:
-    "Looking for an internship from 2026/2027 — 3 to 6 months.", // TODO: adjust dates
+    "Available for a 3–6 month internship from 15 March 2027.", // TODO: adjust dates
   email: "abdullahakmalhakim@gmail.com",
   github: "https://github.com/acidzburns",
   linkedin: "https://www.linkedin.com/in/akmal-hakim-655063251/",
