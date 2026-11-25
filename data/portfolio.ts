@@ -106,13 +106,15 @@ export const projects: Project[] = [
 
 export const experience: Experience[] = [
   {
-    role: "IT Intern — IT Treasury",
+    role: "IT Intern — IT Treasury (Global Banking Delivery & Operations)",
     org: "Maybank",
     period: "Sep 2024 – Feb 2025",
     points: [
-      // TODO: replace with what you actually did. Use action + result, e.g.
-      "Supported the IT Treasury team on [systems / tasks you worked on]",
-      "Built / tested / documented [something specific] which helped [result]",
+      "Performed System Integration Testing (SIT) for the Real-Time Distribution System (RTDS) upgrade, which moved market-data distribution from v3.1 on a physical Oracle Linux server to v3.7 on Red Hat Enterprise Linux VMs",
+      "Verified connectivity, data completeness, latency and error handling from the Refinitiv feed to downstream treasury systems (Kondor+, ARTS, FINIQ, MAESTRO)",
+      "Wrote SIT plans and test scripts, test evidence, a test coverage checklist and technical documentation following the bank's SDLC",
+      "Raised and tracked Change Requests in HP Service Manager with risk assessments and hour-by-hour implementation plans, through to Change Advisory Board (CAB) approval",
+      "Troubleshot treasury applications on OpenShift using oc and Linux commands (pod status, logs), and gave regular status updates to the Technical Project Manager",
     ],
   },
 ];
