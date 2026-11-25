@@ -1,7 +1,6 @@
 // ─────────────────────────────────────────────────────────────
 // All the text on your portfolio lives in this one file.
 // Edit here — you don't need to touch the page code.
-// Anything marked TODO is a placeholder for you to fill in.
 // ─────────────────────────────────────────────────────────────
 
 export type Project = {
@@ -29,8 +28,7 @@ export const profile = {
   location: "Malaysia",
   tagline:
     "Final-year CS student at UiTM who builds web systems and connects them together — from system integrations with ServiceNow to defect detection with deep learning.",
-  availability:
-    "Available for a 3–6 month internship from 15 March 2027.", // TODO: adjust dates
+  availability: "Available for a 3–6 month internship from 15 March 2027.",
   email: "abdullahakmalhakim@gmail.com",
   github: "https://github.com/acidzburns",
   linkedin: "https://www.linkedin.com/in/akmal-hakim-655063251/",
@@ -72,6 +70,21 @@ export const projects: Project[] = [
     links: [{ label: "Code", href: "https://github.com/acidzburns/integration-hub" }],
   },
   {
+    title: "Car Rental Platform",
+    summary:
+      "A car rental marketplace where renters book cars from lessors, with payments, refunds, reviews and an admin back office. Group project for CSC577.",
+    highlights: [
+      "Three roles with separate logins: renters search, book, pay and review; lessors list cars and manage bookings and earnings; admins verify lessors and manage users, bookings and support tickets",
+      "Built most of the admin side, payments and notifications (46 of 68 commits)",
+      "Simulated FPX online-banking payments, cancellations with refund tracking, and email notifications with PHPMailer",
+      "Admin reports and charts with Chart.js; lessor verification and account suspension",
+      "Oracle Database 23ai, with every query using bind variables to prevent SQL injection; passwords stored as hashes",
+    ],
+    stack: ["PHP", "Oracle Database", "SQL", "JavaScript", "Chart.js", "PHPMailer"],
+    status: "Completed",
+    links: [{ label: "Code", href: "https://github.com/acidzburns/CarRentalPlatformSystem" }],
+  },
+  {
     title: "Boundary-Aware CNN for Honeycomb Panel Defects",
     summary:
       "Research project classifying honeycomb sandwich panel images as defected or intact by looking at whether the hexagonal cell boundaries are broken or deformed.",
@@ -83,7 +96,6 @@ export const projects: Project[] = [
     ],
     stack: ["Python", "Deep Learning", "Computer Vision", "Tkinter"],
     status: "In progress",
-    links: [{ label: "Code", href: "https://github.com/acidzburns" }], // TODO: repo link
   },
   {
     title: "This Portfolio",
@@ -123,19 +135,19 @@ export const education = [
   {
     degree: "Bachelor of Computer Science (Hons) — Software Engineering",
     school: "Universiti Teknologi MARA (UiTM)",
-    period: "Final year", // TODO: e.g. "2025 – 2027 (expected)"
+    period: "2025 – 2027 (expected)",
   },
   {
     degree: "Diploma in Computer Science",
     school: "UiTM Cawangan Kedah",
-    period: "Completed", // TODO: years
+    period: "2022 – 2025",
   },
 ];
 
 export const skills: { group: string; items: string[] }[] = [
-  { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "PHP", "Python", "SQL"] },
-  { group: "Web & APIs", items: [".NET / ASP.NET Core", "React", "Next.js", "Laravel (MVC)", "REST APIs"] },
-  { group: "Data", items: ["PostgreSQL", "MySQL", "SQLite", "Entity Framework Core"] },
+  { group: "Languages", items: ["C#", "Java", "TypeScript", "JavaScript", "PHP", "Python", "SQL"] },
+  { group: "Web & APIs", items: [".NET / ASP.NET Core", "Spring Boot", "React", "Next.js", "Laravel (MVC)", "REST APIs"] },
+  { group: "Data", items: ["PostgreSQL", "Oracle", "MySQL", "SQLite", "Entity Framework Core"] },
   { group: "Cloud & Tools", items: ["Microsoft Azure", "Git & GitHub", "GitHub Actions", "ServiceNow", "Vercel"] },
 ];
 

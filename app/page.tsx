@@ -8,6 +8,7 @@ import {
   stats,
   type Project,
 } from "@/data/portfolio";
+import { SkillIcon } from "@/components/SkillIcon";
 
 const nav = [
   { id: "work", label: "Work" },
@@ -16,7 +17,7 @@ const nav = [
   { id: "contact", label: "Contact" },
 ];
 
-const toolWall = ["Next.js", "TypeScript", "Laravel", "Python", "ServiceNow", "MySQL", "GitHub Actions", "REST APIs"];
+const toolWall = [".NET", "React", "TypeScript", "Spring Boot", "Next.js", "Laravel", "PostgreSQL", "Python"];
 
 /* ── Small building blocks ─────────────────────────────────────────── */
 
@@ -302,8 +303,8 @@ export default function Home() {
         <section className="grid border-t border-line md:grid-cols-[1fr_2fr]">
           <div className="flex flex-col justify-between gap-8 border-line p-6 sm:p-8 md:border-r">
             <p className="text-2xl leading-snug tracking-tight text-muted">
-              Working across the stack, <span className="text-ink">from APIs and databases</span> to CI pipelines and
-              ServiceNow.
+              Working across the stack, <span className="text-ink">from APIs and databases</span> to CI pipelines,
+              Azure and ServiceNow.
             </p>
             <div>
               <PrimaryButton href="#skills">See all skills</PrimaryButton>
@@ -313,8 +314,9 @@ export default function Home() {
             {toolWall.map((t) => (
               <div
                 key={t}
-                className="grid aspect-[4/3] place-items-center rounded-lg border border-card-line bg-card px-2 text-center text-[15px] font-semibold tracking-tight"
+                className="flex aspect-[4/3] flex-col items-center justify-center gap-2.5 rounded-lg border border-card-line bg-card px-2 text-center text-[15px] font-semibold tracking-tight"
               >
+                <SkillIcon name={t} size={28} />
                 {t}
               </div>
             ))}
@@ -391,7 +393,8 @@ export default function Home() {
                 <h3 className="font-mono text-xs uppercase tracking-wider text-accent">{g.group}</h3>
                 <ul className="mt-4 space-y-2">
                   {g.items.map((s) => (
-                    <li key={s} className="font-medium">
+                    <li key={s} className="flex items-center gap-2.5 font-medium">
+                      <SkillIcon name={s} />
                       {s}
                     </li>
                   ))}
