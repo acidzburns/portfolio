@@ -113,6 +113,20 @@ export const projects: Project[] = [
       { label: "Live", href: "https://akmalhakim.vercel.app" },
     ],
   },
+
+    {
+    title: "DeskPilot",
+    summary:
+      "Currently building: an IT helpdesk API where AI triages new tickets and suggests fixes from the team's own knowledge base.",
+    highlights: [
+      "Tickets are categorised and prioritised automatically by an AI model",
+      "Retrieval-augmented generation (RAG): suggested fixes are grounded in the knowledge-base articles, with sources shown",
+      "SLA timers flag overdue tickets; Staff, Agent and Admin roles with Spring Security",
+      "REST API with PostgreSQL, tests and a CI/CD pipeline to Azure",
+    ],
+    stack: ["Java", "Spring Boot", "Spring AI", "PostgreSQL", "Docker", "Azure"],
+    status: "In progress",
+  },
   // Add your new projects here — copy one block above and edit it.
 ];
 
