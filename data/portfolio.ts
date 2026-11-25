@@ -37,7 +37,7 @@ export const profile = {
 };
 
 export const projects: Project[] = [
-    {
+  {
     title: "AssetFlow",
     summary:
       "An IT asset and equipment loan system: staff request laptops and other equipment, admins approve, hand out and receive it back, and a dashboard tracks overdue loans and repairs.",
@@ -47,12 +47,15 @@ export const projects: Project[] = [
       "PostgreSQL with Entity Framework Core migrations, plus hand-written SQL for the admin report",
       "React + TypeScript frontend with role-based actions and an admin dashboard",
       "45 automated tests (xUnit + Vitest); GitHub Actions CI builds and tests the API and frontend",
+      "Deployed on Microsoft Azure (App Service + Azure Database for PostgreSQL) with a GitHub Actions pipeline that tests before every deploy",
     ],
-    stack: ["C#", ".NET 10", "PostgreSQL", "React", "TypeScript", "xUnit", "GitHub Actions"],
-    status: "In progress",
-    links: [{ label: "Code", href: "https://github.com/acidzburns/assetflow" }],
+    stack: ["C#", ".NET 10", "PostgreSQL", "React", "TypeScript", "Azure", "xUnit", "GitHub Actions"],
+    status: "Completed",
+    links: [
+      { label: "Live demo", href: "https://assetflow-api-akmal-gubxf8djb2aja3c7.malaysiawest-01.azurewebsites.net" },
+      { label: "Code", href: "https://github.com/acidzburns/assetflow" },
+    ],
   },
-
   {
     title: "Integration Hub",
     summary:
@@ -131,7 +134,7 @@ export const skills: { group: string; items: string[] }[] = [
   { group: "Languages", items: ["C#", "TypeScript", "JavaScript", "PHP", "Python", "SQL"] },
   { group: "Web & APIs", items: [".NET / ASP.NET Core", "React", "Next.js", "Laravel (MVC)", "REST APIs"] },
   { group: "Data", items: ["PostgreSQL", "MySQL", "SQLite", "Entity Framework Core"] },
-  { group: "Tools", items: ["Git & GitHub", "GitHub Actions", "ServiceNow", "VS Code", "Vercel"] },
+  { group: "Cloud & Tools", items: ["Microsoft Azure", "Git & GitHub", "GitHub Actions", "ServiceNow", "Vercel"] },
 ];
 
 export const languages = ["English", "Bahasa Melayu"];
@@ -140,6 +143,7 @@ export const languages = ["English", "Bahasa Melayu"];
 export const stats: { label: string; value: string }[] = [
   { label: "Automated tests", value: "68" },
   { label: "CI pipeline", value: "passing" },
+  { label: "Azure", value: "live" },
   { label: "ServiceNow", value: "connected" },
   { label: "Internship", value: "3–6 months" },
   { label: "Languages", value: "EN · BM" },
